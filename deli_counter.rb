@@ -3,11 +3,11 @@ katz_deli = []
    if katz_deli.length == 0
      puts "The line is currently empty."
    else
-     intro = "The line is currently:"
+     status = "The line is currently:"
      katz_deli.each_with_index do |name, index|
      intro << " #{index + 1}. #{name}"
    end
-     puts intro
+     puts status
    end
  end
 
@@ -16,11 +16,10 @@ katz_deli = []
    puts "Welcome, #{name}. You are number #{katz_deli.length} in line."
  end
 
- def now_serving(other_deli)
-   if other_deli != []
-     puts "Currently serving #{other_deli[0]}."
-     other_deli.shift
-   else
-     puts "There is nobody waiting to be served!"
-   end
- end
+ def now_serving(katz_deli)
+    if katz_deli.length == 0 
+      puts "There is nobody waiting to be served!"
+    else
+      puts "Currently serving #{katz_deli.shift}."
+    end
+  end
