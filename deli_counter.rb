@@ -1,27 +1,26 @@
-require 'pry'
-
-def line(katz_deli)
+katz_deli = []
+ def line(katz_deli)
    if katz_deli.length == 0
      puts "The line is currently empty."
    else
-     new_array = "The line is currently:"
+     intro = "The line is currently:"
      katz_deli.each_with_index do |name, index|
-     new_array << " #{index + 1}. #{name}"
+     intro << " #{index + 1}. #{name}"
    end
      puts intro
    end
  end
-
+ 
  def take_a_number(katz_deli, name)
    katz_deli << name
    puts "Welcome, #{name}. You are number #{katz_deli.length} in line."
  end
-
- def now_serving(katz_deli)
-   if katz_deli.count == 0
-     puts "There is nobody waiting to be served!"
+ 
+ def now_serving(other_deli)
+   if other_deli != []
+     puts "Currently serving #{other_deli[0]}."
+     other_deli.shift
    else
-   puts "Currently serving #{katz_deli[0]}."
-   katz_deli.shift
- end
+     puts "There is nobody waiting to be served!"
+   end
  end
