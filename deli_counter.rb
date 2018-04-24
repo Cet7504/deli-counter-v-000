@@ -5,7 +5,7 @@ katz_deli = []
    else
      status = "The line is currently:"
      katz_deli.each_with_index do |name, index|
-     intro << " #{index + 1}. #{name}"
+     status << " #{index + 1}. #{name}"
    end
      puts status
    end
