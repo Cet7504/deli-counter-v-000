@@ -10,12 +10,12 @@ katz_deli = []
      puts intro
    end
  end
- 
+
  def take_a_number(katz_deli, name)
    katz_deli << name
    puts "Welcome, #{name}. You are number #{katz_deli.length} in line."
  end
- 
+
  def now_serving(other_deli)
    if other_deli != []
      puts "Currently serving #{other_deli[0]}."
